@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.dark-color{
+    color: #3A3A3A;
+}
+
 header{
     padding: 50px 0;
 }
@@ -42,13 +46,11 @@ ul li > a,i {
 }
 
 .banner-title{
-    color: #3A3A3A;
     font-size: 3.25rem;
     font-weight: 700;
 }
 
 .banner-description{
-    color: #3A3A3A;
     margin: 20px 0;
     font-size: 1rem;
     font-weight: 600;
@@ -79,6 +81,66 @@ ul li > a,i {
     /* background-position: center; */
 }
 
+.partners{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;   
+    padding: 15px 0;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popular{
+    width: 80%;
+    margin: auto;
+    
+}
+
+.section-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 50px 0;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    gap: 20px;
+}
+
+.card{
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+}
+
+.card-title{
+    color: #18191F;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.card-price{
+    color: #18191F;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.card > p{
+    color: #787885;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
 
 @media screen and (max-width: 576px) {
     nav{
@@ -106,6 +168,21 @@ ul li > a,i {
     .banner-image > img{
         width: 200px;
     }
+
+    .partners{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .partners > img{
+        width: 50px;
+        margin: 5px 20px;
+    }
+
+    .card-container{
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -122,5 +199,17 @@ ul li > a,i {
     .banner{
         width: 100%;
         text-align: center;
+    }
+
+    .partners{
+        flex-direction: row;
+    }
+
+    .partners > img{
+        width: 50px;
+    }
+
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
