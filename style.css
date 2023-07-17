@@ -1,9 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;600;700&display=swap');
 
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+header{
+    padding: 50px 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul > li {
+    list-style: none;
+}
+
+ul li > a,i {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #3A3A3A;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.banner-container{
+    margin: 50px;
+}
+
+.banner-title{
+    color: #3A3A3A;
+    font-size: 3.25rem;
+    font-weight: 700;
+}
+
+.banner-description{
+    color: #3A3A3A;
+    margin: 20px 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.fa-arrow-right{
+    margin: 0;
+    padding: 0;
+    margin-left: 8px;
+    color: white;
+}
+
+.btn-primary{
+    border-radius: 41px;
+    background: #E02C6D;
+    color: #FFF;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 23px;
+    border: none;
+}
+
+.banner-image{
+    margin-left: 60px;
+    background-image: url('./images/Circle\ design.svg');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+}
+
+
+@media screen and (max-width: 576px) {
+    nav{
+        flex-direction: column;
+    }
+
+    nav{
+        margin: auto;
+    }
+
+    ul li > a, i {
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+    }
+
+    .banner-content{
+        margin: 0;
+        text-align: center;
+    }
+
+    .banner-image > img{
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    nav,
+    .banner{
+        flex-direction: column;
+    }
+
+    ul li > a, i {
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+
+    .banner{
+        width: 100%;
+        text-align: center;
+    }
 }
